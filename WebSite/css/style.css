@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    /* background-color: black; */
+}
+
+/* MENU */
+
+header {
+    padding: 15px 0;
+    color: white;
+    background-color: black;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.menu ul li {
+    cursor: pointer;
+}
+
+.menu ul li a {
+    color: white;
+}
+
+/* BANNER */
+
+.banner {
+    background-color: black;
+    padding: 100px 0;
+    background-size: cover;
+    filter: blur;
+}
+
+.banner .container {
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .container h1 {
+    /* color: white; */
+    font-size: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 100px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* CONTEUDO PRINCIPAL */
+
+
+.conteudo1 {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    /* padding: 25px 0px; */
+    height: 75vh;
+    box-shadow: 0px 0px 42px 12px rgb(0 0 0 / 41%);
+}
+
+.conteudo1 a {
+    text-decoration: none;
+    height: 0;
+}
+
+
+.conteudo1 .caixa p {
+    font-size: large;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.conteudo1 .caixa h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+.conteudo1 .caixa img {
+    /* height: 400px; */
+    padding: 20px 0px;
+    width: 400px;
+    display: flex;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: -150px;
+
+}
+
+.button {
+    display: block;
+    position: relative;
+    padding: 1.5em 18em;
+    border: #fff;
+    color: #e55743;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    /* border-color: #444; */
+    width: 122px;
+    height: 0px;
+}
+
+
+.button p{
+    text-align: center;
+    
+}
+
+.button:hover{
+    background-color: #fff;
+}
