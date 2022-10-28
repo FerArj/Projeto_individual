@@ -41,6 +41,29 @@ header {
     color: white;
 }
 
+.cadastro-link{
+    background-color: white;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.cadastro-link:hover{
+    cursor: pointer;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #ff1361 67%,
+            #fff800 100%);
+    color: white;
+}
+
+.cadastro-link a:hover{
+    color: white;
+}
+
+.links{
+    padding: 10px;
+}
+
 /* BANNER */
 
 .banner {
