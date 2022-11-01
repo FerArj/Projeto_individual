@@ -217,7 +217,7 @@ header {
     font-size: 45px;
     font-weight: bold;
     color: #e55743;
-    margin-top: 15%;
+    margin-top: 0;
 }
 
 .descricao-conteudo1 .button{
@@ -325,7 +325,7 @@ header {
     font-size: 45px;
     font-weight: bold;
     color: #e55743;
-    margin-top: 15%;
+    margin-top: 0;
 }
 
 .descricao-conteudo2 .button{
@@ -435,7 +435,7 @@ header {
     font-size: 45px;
     font-weight: bold;
     color: #e55743;
-    margin-top: 15%;
+    margin-top: 0;
 }
 
 .descricao-conteudo3 .button{
@@ -539,7 +539,7 @@ header {
 }
 
 .descricao-conteudo4 .caixa h3 {
-    font-size: 45px;
+    font-size: 25px;
     font-weight: bold;
     color: #e55743;
     margin-top: 0;
