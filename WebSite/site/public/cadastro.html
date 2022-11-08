@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img2/tardis_icon.png">
     <link rel="stylesheet" href="../css/style_cadastro.css">
+    <script src="js/funcoes.js"></script>
     <title>Cadastro</title>
 </head>
+
 <body>
     <main>
-        <form action="">
+
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
+        <div class="form">
             <h1>Crie sua conta</h1>
             <label for="email">
                 <span>E-mail</span>
                 <input type="email" id="email_input" name="email">
             </label>
-            
+
             <label for="usuario">
                 <span>Usuário</span>
                 <input type="text" id="usuario_input" name="usuario">
             </label>
-            
+
             <label for="senha">
                 <span>Senha</span>
                 <input type="password" id="senha_input" name="senha">
             </label>
             <p>Já tem uma conta? <a href="login.html">Acesse aqui.</a></p>
-            <input type="submit" onclick="cadastrar()" value="Criar conta"></submit>
-        </form>
+            <button onclick="cadastrar()">Criar conta</button>
+        </div>
+
+        <div id="div_aguardar" class="loading-div">
+            <!-- <img src="./assets/circle-loading.gif" id="loading-gif"> -->
+        </div>
+
+        <div id="div_erros_login">
+
+        </div>
+
     </main>
     <section class="images">
         <img src="../assets/img2/TARDIS-trans.png" alt="">
         <div class="circle"></div>
     </section>
+    
 </body>
+
 </html>
 <script>
     function cadastrar() {
-        aguardar();
+        // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var emailVar = email_input.value;
         var usuarioVar = usuario_input.value;
         var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (usuarioVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (usuarioVar == "" || emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -82,7 +104,7 @@
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
-                
+
                 limparFormulario();
                 finalizarAguardar();
             } else {

@@ -27,23 +27,23 @@ main h1{
     font-size: -webkit-xxx-large;
 }
 
-main form{
+main .form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main form label{
+main .form label{
     display: flex;
     flex-direction: column;
 }
 
-main form label span{
+main .form label span{
     font-size: 20px;
     margin-top: 10%;
 }
 
-main form input{
+main .form input, button{
     background-color: #161923;
     width: 300px;
     height: 50px;
@@ -56,16 +56,16 @@ main form input{
     border-radius: 8px;
 }
 
-main form p{
+main .form p{
     padding-top: 5%;
 }
 
-main form a{
+main .form a{
     color: #e55743;
    /* text-decoration-line: line-through; */
 }
 
-main form input[type="submit"]{
+main .form button {
     cursor: pointer;
     width: 50%;
     margin-top: 20%;
@@ -75,7 +75,7 @@ main form input[type="submit"]{
     font-size: 16px;
 }
 
-main form input[type="submit"]:hover{
+main .form button:hover{
     background-color: #b14334;
 }
 
