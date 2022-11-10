@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+}
+
+.descricao-conteudo1_interativo{
+    width: 0;
+}
+
+.descricao_conteudo1_interativo .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.descricao_conteudo1_interativo .container h2{
+    color: #e55743;
+}
+
+
+
+.card{
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 41px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 41px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 41px -7px rgba(0,0,0,0.75);
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+
+}
+
+.descricao-conteudo1_interativo .caixa{
+    margin: 0;
+}
+
+.descricao-conteudo1_interativo .caixa p {
+    font-size: large;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.descricao-conteudo1_interativo .caixa h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #e55743;
+    margin-top: 0;
+}
+
+
+.descricao-conteudo1_interativo .caixa h2 {
+    color: white;
+}
+
+.descricao-conteudo1_interativo .button{
+    display: block;
+    position: relative;
+    padding: 1.5em 9em;
+    border: #e55743;
+    color: #e55743;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    /* border-color: #444; */
+    width: 122px;
+    height: 0px;
+}
+
+.descricao-conteudo1_interativo .caixa img {
+    width: 400px;
+    height: 300px
+}
+
+.descricao-conteudo1_interativo .button:hover{
+    background-color: #e55743;
+    color: white;
+}
+
+.grupo1, .grupo2, .grupo3, .grupo4, .grupo5{
+    display: flex;
+}

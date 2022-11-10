@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Who</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/img2/tardis_icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Doctor Who</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="titulo">
+                    <!-- <h1>Doctor Who</h1> -->
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="conteudo1" class="conteudo1">
+                <div class="container">
+                    <div class="caixas">
+                        <div class="caixa">
+                            <img src="../assets/img/jodie.png" alt="">
+                            <h3>DOUTOR FAVORITO</h3>
+                            <p>Consulte se seu doutor favorito está vencendo!</p>
+                            <a href="#descricao1">
+                                <div onclick="ler_mais_conteudo1()" class="button">CONSULTAR</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="descricao1" style="display:none" class="descricao-conteudo1_interativo">
+                <div class="container">
+                    <div class="caixas">
+                        <div class="caixa">
+                        <a href="#conteudo1">
+                            <div onclick="fechar_descricao1()" class="button">VOLTAR</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="conteudo2" class="conteudo2">
+                <div class="container">
+                    <div class="caixas">
+                        <div class="caixa">
+                            <h3>TARDIS</h3>
+                            <p>Para quem olha de fora, é apenas uma caixa azul...</p>
+                            <img src="../assets/img/THE-GHOST-MONUMENT.png" alt="">
+
+                            <a href="#descricao2">
+                                <div onclick="ler_mais_conteudo2()" class="button">VOLTAR</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>Todos os direitos reservados para Fernando Araujo &copy; </p>
+            </div>
+        </footer>
+    </body>
+
+    </html>
+    <script src="../js/funcoes.js"></script>
+</body>
+
+</html>

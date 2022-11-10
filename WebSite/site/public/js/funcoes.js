@@ -1,27 +1,29 @@
 // FUNÇÕES DOS CONTEÚDOS INFORMATIVOS
 
 function ler_mais_conteudo1(){
-    descricao1.style.display = "block";
+    descricao1.style.display = "flex";
+    conteudo1.style.display = "none";
 }
 
 function fechar_descricao1(){
     descricao1.style.display = "none";
+    conteudo1.style.display = "flex";
 }
 
 function ler_mais_conteudo2(){
-    descricao2.style.display = "block";
+    descricao2.style.display = "flex";
 }
 
 function fechar_descricao2(){
-    descricao2.style.display = "none";
+    descricao2.style.display = "flex";
 }
 
 function ler_mais_conteudo3(){
-    descricao3.style.display = "block";
+    descricao3.style.display = "flex";
 }
 
 function fechar_descricao3(){
-    descricao3.style.display = "none";
+    descricao3.style.display = "flex";
 }
 
 // TRANSIÇÃO AUTOMATICA DO CARROSSEL
