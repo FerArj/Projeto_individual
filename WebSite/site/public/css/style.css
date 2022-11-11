@@ -21,7 +21,7 @@ header {
     background-color: black;
 }
 
-.container {
+.container, .container-interativo {
     width: 50%;
     display: flex;
     margin: 0 auto;
@@ -86,7 +86,7 @@ header {
     filter: blur;
 }
 
-.banner .container {
+.banner .container, .container-interativo {
     height: 60vh;
     align-items: center;
     justify-content: center;
@@ -108,6 +108,23 @@ header {
     animation: textclip 2s linear infinite;
     display: inline-block;
     font-size: 700%;
+}
+
+.banner .container-interativo h1 {
+     /* color: white; */
+     font-size: 40px;
+     text-transform: uppercase;
+     /* background-image: linear-gradient(-225deg, #ffc107 0%, #ff5722 29%, #ff1361 67%, #fff800 100%); */
+     background-size: auto auto;
+     background-clip: border-box;
+     background-size: 200% auto;
+     color: #fff;
+     background-clip: text;
+     -webkit-background-clip: text;
+     /* -webkit-text-fill-color: transparent; */
+     animation: textclip 2s linear infinite;
+     display: inline-block;
+     font-size: 700%;
 }
 
 @keyframes textclip {

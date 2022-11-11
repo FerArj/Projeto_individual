@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*ANOTAÇÕES*/
+
+/*margin: 0 nos conteúdos para notebook;
+font-size: 18px; 
+height: 100vh no ultimo conteúdo.
+*/
+
+/* MENU */
+
+header {
+    padding: 15px 0;
+    color: white;
+    background-color: black;
+}
+
+.container, .container-interativo {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .titulo h1{
+    font-size: 35px;
+    width: 300px;
+}
+
+.container .titulo img {
+    width: 230px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.menu ul li {
+    cursor: pointer;
+}
+
+.menu ul li a {
+    color: white;
+}
+
+.cadastro-link a{
+    background-color: white;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    color: black;
+}
+
+.cadastro-link a:hover {
+    cursor: pointer;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #ff1361 67%,
+            #fff800 100%);
+    color: white;
+} 
+
+.links{
+    padding: 10px;
+}
+
+.links a:hover{
+    color: #e55743;
+}
+
+/* BANNER */
+
+.banner {
+    /* background-color: rgb(255, 255, 255); */
+    padding: 75px 0;
+    background-size: cover;
+    filter: blur;
+}
+
+.banner .container, .container-interativo {
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.banner .container h1 {
+    /* color: white; */
+    font-size: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg, #ffc107 0%, #ff5722 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 700%;
+}
+
+.banner .container-interativo h1 {
+     /* color: white; */
+     font-size: 40px;
+     text-transform: uppercase;
+     /* background-image: linear-gradient(-225deg, #ffc107 0%, #ff5722 29%, #ff1361 67%, #fff800 100%); */
+     background-size: auto auto;
+     background-clip: border-box;
+     background-size: 200% auto;
+     color: #fff;
+     background-clip: text;
+     -webkit-background-clip: text;
+     /* -webkit-text-fill-color: transparent; */
+     animation: textclip 2s linear infinite;
+     display: inline-block;
+     font-size: 700%;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+        filter: brightness(0.6);
+}
+
+/* CONTEUDO PRINCIPAL */
+
+/* CONTEÚDO1 */
+
+.conteudo1 {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    /* padding: 25px 0px; */
+    height: 75vh;
+    box-shadow: 0px 0px 42px 12px rgb(0 0 0 / 41%);
+}
+
+.conteudo1 a {
+    text-decoration: none;
+    height: 0;
+}
+
+
+.conteudo1 .caixa p {
+    font-size: large;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.conteudo1 .caixa{
+    margin-left: -30%;
+}
+
+
+.conteudo1 .caixa h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.conteudo1 .caixa img {
+    height: 60%;
+    padding: 20px 0px;
+    width: 25%;
+    display: flex;
+    position: absolute;
+    margin-left: 57%;
+    margin-top: -10%;
+}
+
+.button {
+    display: block;
+    position: relative;
+    padding: 1.5em 18em;
+    border: #fff;
+    color: #e55743;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    /* border-color: #444; */
+    width: 122px;
+    height: 0px;
+}
+
+
+.button p{
+    text-align: center;
+    
+}
+
+.button:hover{
+    background-color: #fff;
+}
+
+.descricao-conteudo1{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    /* padding: 25px 0px; */
+    height: 75vh;
+    box-shadow: 0px 0px 42px 12px rgb(0 0 0 / 41%);
+}
+
+.descricao-conteudo1 .caixa{
+    margin: 0;
+}
+
+.descricao-conteudo1 .caixa p {
+    font-size: large;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.descricao-conteudo1 .caixa h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #e55743;
+    margin-top: 0;
+}
+
+.descricao-conteudo1 .button{
+    display: block;
+    position: relative;
+    padding: 1.5em 18em;
+    border: #e55743;
+    color: #e55743;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    /* border-color: #444; */
+    width: 122px;
+    height: 0px;
+}
+
+.descricao-conteudo1 .caixa img {
+    /* height: 400px; */
+    padding: 20px 0px;
+    width: 400px;
+    display: flex;
+    position: absolute;
+    margin-left: 45%;
+    /* margin-top: -150px; */
+
+}
+
+.descricao-conteudo1 .button:hover{
+    background-color: #e55743;
+    color: white;
+}
+
+/* CONTEÚDO2 */
+
+.conteudo2 {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    /* padding: 25px 0px; */
+    height: 75vh;
+    box-shadow: 0px 0px 42px 12px rgb(0 0 0 / 41%);
+}
+
+.conteudo2 a {
+    text-decoration: none;
+    height: 0;
+}
+
+.conteudo2 .caixa{
+    margin-left: -30%;
+}
+
+.conteudo2 .caixa p {
+    font-size: large;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.conteudo2 .caixa h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+.conteudo2 .caixa img {
+    /*height: 400px;*/ 
+    padding: 20px 0px;
+    width: 28%;
+    display: flex;
+    position: absolute;
+    margin-left: 57%;
+    margin-top: -10%;
+
+}
+
+.descricao-conteudo2{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    /* padding: 25px 0px; */
+    height: 75vh;
+    box-shadow: 0px 0px 42px 12px rgb(0 0 0 / 41%);
+}
+
+.descricao-conteudo2 .caixa{
+    margin: 0;
+}
+
+.descricao-conteudo2 .caixa p {
+    font-size: large;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.descricao-conteudo2 .caixa h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #e55743;
+    margin-top: 0;
+}
+
+.descricao-conteudo2 .button{
+    display: block;
+    position: relative;
+    padding: 1.5em 18em;
+    border: #e55743;
+    color: #e55743;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0 2px 0 2px;
+    border-style: solid;
+    /* border-color: #444; */
+    width: 122px;
+    height: 0px;
+}
+
+.descricao-conteudo2 .button:hover{
+    background-color: #e55743;
+    color: white;
+}
+
+
+.descricao-conteudo2 .caixa img {
+   /* height: 400px; */
+   padding: 20px 0px;
+   width: 20%;
+   display: flex;
+   position: absolute;
+   margin-left: 53%;
+   /* margin-top: -150px; */
+
+}
+
+
+/* footer */
+footer{
+    background-color: black;
+    padding: 45px 0;
+}
+
+footer .container{
+    justify-content: center;
+}
+
+footer .container p{
+    color: white;
+}

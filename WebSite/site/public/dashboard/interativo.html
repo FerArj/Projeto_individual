@@ -5,83 +5,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img2/tardis_icon.png">
+    <link rel="stylesheet" href="../css/style_interativo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Doctor Who</title>
 </head>
 
+
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/img2/tardis_icon.png">
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Doctor Who</title>
-    </head>
-
-    <body>
-        <header>
-            <div class="container">
-                <div class="titulo">
-                    <!-- <h1>Doctor Who</h1> -->
-                </div>
+    <header>
+        <div class="container">
+            <div class="titulo">
+                <!-- <h1>Doctor Who</h1> -->
+                <img src="../assets/img2/logodw.png" alt="">
             </div>
-        </header>
-        <main>
-            <div id="conteudo1" class="conteudo1">
-                <div class="container">
-                    <div class="caixas">
-                        <div class="caixa">
-                            <img src="../assets/img/jodie.png" alt="">
-                            <h3>DOUTOR FAVORITO</h3>
-                            <p>Consulte se seu doutor favorito está vencendo!</p>
-                            <a href="#descricao1">
-                                <div onclick="ler_mais_conteudo1()" class="button">CONSULTAR</div>
-                            </a>
-                        </div>
+            <div class="menu">
+                <ul>
+                    <li></li>
+                    <!-- <li class="links"><a href="">Quiz</a></li> -->
+            </div>
+            <div class="cadastro-link">
+                <li><a href="../index.html">SAIR</a></li>
+            </div>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <div class="container-interativo">
+                <img class="back-video" src="../assets/img2/banner1.png" alt="">
+                <h1 class="int-titulo">Bem vindo, usuário</h1>
+            </div>
+        </div>
+
+        <div id="conteudo1" class="conteudo1">
+            <div class="container">
+                <div class="caixas">
+                    <div class="caixa">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                          </div>                          
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="conteudo2" class="conteudo2">
+            <div class="container">
+                <div class="caixas">
+                    <div class="caixa">
+                        <h3>TARDIS</h3>
+                        <p>Para quem olha de fora, é apenas uma caixa azul...</p>
+                        <img src="../assets/img/THE-GHOST-MONUMENT.png" alt="">
 
-            <div id="descricao1" style="display:none" class="descricao-conteudo1_interativo">
-                <div class="container">
-                    <div class="caixas">
-                        <div class="caixa">
-                        <a href="#conteudo1">
-                            <div onclick="fechar_descricao1()" class="button">VOLTAR</div>
+                        <a href="#descricao2">
+                            <div onclick="ler_mais_conteudo2()" class="button">VOLTAR</div>
                         </a>
                     </div>
                 </div>
             </div>
-            </div>
-
-            <div id="conteudo2" class="conteudo2">
-                <div class="container">
-                    <div class="caixas">
-                        <div class="caixa">
-                            <h3>TARDIS</h3>
-                            <p>Para quem olha de fora, é apenas uma caixa azul...</p>
-                            <img src="../assets/img/THE-GHOST-MONUMENT.png" alt="">
-
-                            <a href="#descricao2">
-                                <div onclick="ler_mais_conteudo2()" class="button">VOLTAR</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="container">
-                <p>Todos os direitos reservados para Fernando Araujo &copy; </p>
-            </div>
-        </footer>
-    </body>
-
-    </html>
-    <script src="../js/funcoes.js"></script>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Todos os direitos reservados para Fernando Araujo &copy; </p>
+        </div>
+    </footer>
 </body>
 
 </html>
+<script src="../js/funcoes.js"></script>
+</body>
+
+</html>
+
+<script>
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45],
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+   
