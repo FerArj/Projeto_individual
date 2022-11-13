@@ -182,13 +182,16 @@ header {
 }
 
 .conteudo1 .caixa img {
-    height: 60%;
-    padding: 20px 0px;
+    height: 30%;
+    padding: 1px 1px;
     width: 25%;
     display: flex;
-    position: absolute;
-    margin-left: 57%;
-    margin-top: -10%;
+    /* position: absolute; */
+    margin-left: 100%;
+    margin-top: -30%;
+    border-radius: 50%;
+    border: 3px solid #598ff5;
+    background-color: #598ff5;
 }
 
 .button {

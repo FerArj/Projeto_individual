@@ -35,7 +35,8 @@
         <div class="banner">
             <div class="container-interativo">
                 <img class="back-video" src="../assets/img2/banner1.png" alt="">
-                <h1 class="int-titulo">Bem vindo, usuário</h1>
+                <h1 class="int-titulo">Bem vindo, <h1 id="h1_usuario" style="color: #598ff5;"><h1 style="color: #598ff5;">.</h1></h1>
+                </h1>
             </div>
         </div>
 
@@ -44,13 +45,16 @@
                 <div class="caixas">
                     <div class="caixa">
                         <div>
-                            <canvas id="myChart"></canvas>
-                          </div>                          
+                            <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                            <img src="../assets/doctors/2th_doctor.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="conteudo2" class="conteudo2">
+        <!-- <div id="conteudo2" class="conteudo2">
             <div class="container">
                 <div class="caixas">
                     <div class="caixa">
@@ -64,7 +68,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
     <footer>
         <div class="container">
@@ -80,36 +84,47 @@
 </html>
 
 <script>
+
+    h1_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     const labels = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
+        '1th Doctor',
+        '2th Doctor',
+        '3th Doctor',
+        '4th Doctor',
+        '5th Doctor',
+        '6th Doctor',
+        '7th Doctor',
+        '8th Doctor',
+        'War Doctor',
+        '9th Doctor',
+        '10th Doctor',
+        '11th Doctor',
+        '12th Doctor',
+        '13th Doctor',
+        '14th Doctor',
     ];
-  
+
     const data = {
-      labels: labels,
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-      }]
+        labels: labels,
+        datasets: [{
+            label: 'VOTAÇÕES DE USUÁRIOS',
+            backgroundColor: '#598ff5',
+            borderColor: '#598ff5',
+            data: [50, 10, 5, 2, 20, 30, 45, 3, 10, 5, 2, 20, 30, 45, 4],
+        }]
     };
-  
+
     const config = {
-      type: 'line',
-      data: data,
-      options: {}
+        type: 'bar',
+        data: data,
+        options: {}
     };
 </script>
 
 <script>
     const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
+        document.getElementById('myChart'),
+        config
     );
-  </script>
-   
+</script>

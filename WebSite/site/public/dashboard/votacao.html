@@ -43,7 +43,7 @@
                                 <h2>1th Doctor</h2>
                                 <img class="img_card" src="../assets/doctors/1th_doctor.png" alt="">
                                 <a href="interativo.html">
-                                    <div onclick="ler_mais_conteudo1()" class="button">VOTAR</div>
+                                    <div onclick="publicar()" class="button">VOTAR</div>
                                 </a>
                             </div>
 
@@ -167,3 +167,40 @@
 </body>
 
 </html>
+<script>
+function publicar() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    var corpo = {
+        fkVoto: 1
+    };
+
+    fetch(`/avisos/publicar/${idUsuario}`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(corpo)
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+            window.location = "/dashboard/mural.html";
+            limparFormulario();
+            finalizarAguardar();
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        } else {
+            throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+
+}
+</script>
