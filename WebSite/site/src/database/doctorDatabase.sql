@@ -4,9 +4,7 @@ use doctorDB;
 
 create table votacao (
 	idVotacao int primary key auto_increment,
-    nome_doutor varchar (45),
-    qtd_votos int,
-    data_hora DATETIME
+    nome_doutor varchar (45)
 );
 
 create table usuario (
@@ -19,21 +17,21 @@ create table usuario (
 );
 
 insert into votacao values
-	(null, '1th Doctor', null, null),
-	(null, '2th Doctor', null, null),
-	(null, '3th Doctor', null, null),
-	(null, '4th Doctor', null, null),
-	(null, '5th Doctor', null, null),
-	(null, '6th Doctor', null, null),
-    (null, '7th Doctor', null, null),
-	(null, '8th Doctor', null, null),
-	(null, '9th Doctor', null, null),
-	(null, 'War Doctor', null, null),
-	(null, '10th Doctor', null, null),
-	(null, '11th Doctor', null, null),
-	(null, '12th Doctor', null, null),
-    (null, '13th Doctor', null, null),
-	(null, '14th Doctor', null, null);
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor'),
+	(null, '1th Doctor');
 
 insert into usuario values
 	(null, 'whovian@gmail.com', 'whovian', '123', 1);
@@ -42,4 +40,14 @@ insert into usuario values
 select * from usuario;
 select * from votacao;
     
+    desc votacao;
+    
 select * from usuario join votacao on fkVotacao = idVotacao;
+
+
+update votacao set qtd_votos = 1 where idVotacao = 1;
+
+drop database doctorDB;
+
+SELECT COUNT(nome_doutor) FROM votacao join usuario on fkVotacao = idVotacao WHERE idVotacao = 4;
+

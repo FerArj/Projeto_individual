@@ -36,6 +36,28 @@
                 <span>Senha</span>
                 <input type="password" id="senha_input" name="senha">
             </label>
+
+            <label for="voto">
+                <span>Doutor Favorito</span>
+                <select id="voto_input" name="voto">
+                    <option value="1">1th Doctor</option>
+                    <option value="2">2th Doctor</option>
+                    <option value="3">3th Doctor</option>
+                    <option value="4">4th Doctor</option>
+                    <option value="5">5th Doctor</option>
+                    <option value="6">6th Doctor</option>
+                    <option value="7">7th Doctor</option>
+                    <option value="8">8th Doctor</option>
+                    <option value="9">War Doctor</option>
+                    <option value="10">9th Doctor</option>
+                    <option value="11">10th Doctor</option>
+                    <option value="12">11th Doctor</option>
+                    <option value="13">12th Doctor</option>
+                    <option value="14">13th Doctor</option>
+                    <option value="15">14th Doctor</option>
+                </select>
+            </label>
+
             <p>Já tem uma conta? <a href="login.html">Acesse aqui.</a></p>
             <button onclick="cadastrar()">Criar conta</button>
         </div>
@@ -53,7 +75,7 @@
         <img src="../assets/img2/TARDIS-trans.png" alt="">
         <div class="circle"></div>
     </section>
-    
+
 </body>
 
 </html>
@@ -66,9 +88,11 @@
         var emailVar = email_input.value;
         var usuarioVar = usuario_input.value;
         var senhaVar = senha_input.value;
+        var fkVotoVar = voto_input.value;
+        var votoVar = 0;
         // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (usuarioVar == "" || emailVar == "" || senhaVar == "") {
+        if (usuarioVar == "" || emailVar == "" || senhaVar == "" || fkVotoVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -90,7 +114,9 @@
                 // Agora vá para o arquivo routes/usuario.js
                 usuarioServer: usuarioVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                fkVotoServer: fkVotoVar,
+                votoServer: votoVar
             })
         }).then(function (resposta) {
 
@@ -121,5 +147,4 @@
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
-
 </script>
