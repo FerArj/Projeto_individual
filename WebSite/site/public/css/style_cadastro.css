@@ -93,10 +93,10 @@ section .circle{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg,#e55743, #b14334);
+    /* background: linear-gradient(45deg,#e55743, #b14334); */
     top: 0;
     left: 0;
     clip-path: circle(40% at right 80%);
     z-index: -1;
-    /* background-image: url(../assets/img2/circle_img.png); */
+    background-image: url(../assets/img2/loginwpp.png);
 }

@@ -37,5 +37,4 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    votar
 };

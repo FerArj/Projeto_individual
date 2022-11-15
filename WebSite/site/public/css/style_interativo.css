@@ -18,7 +18,7 @@ height: 100vh no ultimo conteúdo.
 header {
     padding: 15px 0;
     color: white;
-    background-color: black;
+    background-image: url(../assets/img2/headerbkg.png);
 }
 
 .container, .container-interativo {
