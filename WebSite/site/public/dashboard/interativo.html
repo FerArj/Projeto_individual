@@ -35,7 +35,9 @@
         <div class="banner">
             <div class="container-interativo">
                 <img class="back-video" src="../assets/img2/banner1.png" alt="">
-                <h1 class="int-titulo">Bem vindo, <h1 id="h1_usuario" style="color: #598ff5;"><h1 style="color: #598ff5;">.</h1></h1>
+                <h1 class="int-titulo">Bem vindo, <h1 id="h1_usuario" style="color: #598ff5;">
+                        <h1 style="color: #598ff5;">.</h1>
+                    </h1>
                 </h1>
             </div>
         </div>
@@ -87,6 +89,81 @@
 
     h1_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+    function obterDadosGrafico(idAquario) {
+        alterarTitulo(idAquario)
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGrafico(resposta, idAquario) {
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'VOTAÇÕES DE USUÁRIOS',
+                backgroundColor: '#598ff5',
+                borderColor: '#598ff5',
+                data: [],
+            }]
+        };
+
+        // Criando estrutura para plotar gráfico - dados
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.DOUTOR);
+            dados.datasets[0].data.push(registro.QTDVOTOS);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+
+
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+        setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+    }
+
+
     const labels = [
         '1th Doctor',
         '2th Doctor',
@@ -105,15 +182,15 @@
         '14th Doctor',
     ];
 
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'VOTAÇÕES DE USUÁRIOS',
-            backgroundColor: '#598ff5',
-            borderColor: '#598ff5',
-            data: [50, 10, 5, 2, 20, 30, 45, 3, 10, 5, 2, 20, 30, 45, 4],
-        }]
-    };
+    // const data = {
+    //     labels: labels,
+    //     datasets: [{
+    //         label: 'VOTAÇÕES DE USUÁRIOS',
+    //         backgroundColor: '#598ff5',
+    //         borderColor: '#598ff5',
+    //         data: [50, 10, 5, 2, 20, 30, 45, 3, 10, 5, 2, 20, 30, 45, 4],
+    //     }]
+    // };
 
     const config = {
         type: 'bar',
