@@ -54,4 +54,4 @@ SELECT COUNT(nome_doutor) FROM votacao join usuario on fkVotacao = idVotacao WHE
 
 select votacao.nome_doutor as doutor, count(usuario.fkVotacao) as qtd from usuario as u join votacao as v on v.idVotacao = u.fkVotacao group by u.fkVotacao;
 
-select count(nome_doutor) as doutor from votacao join usuario on fkVotacao = idVotacao group by fkVotacao;
+select v.nome_doutor as doutor, count(u.fkVotacao) as qtd from usuario as u join votacao as v on v.idVotacao = u.fkVotacao group by u.fkVotacao
