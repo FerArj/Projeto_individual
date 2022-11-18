@@ -90,6 +90,8 @@
     h1_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     window.onload = obterDadosGrafico(1);
+    window.onload = obterDadosGrafico(1000);
+
 
     function obterDadosGrafico(idAquario) {
         alterarTitulo(idAquario)
@@ -141,7 +143,7 @@
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.doutor);
+            labels.push(registro.nome_doutor);
             dados.datasets[0].data.push(registro.qtd);
         }
 
@@ -156,7 +158,7 @@
         // Criando estrutura para plotar gráfico - config
         const config = {
             type: 'bar',
-            data: data,
+            data: dados,
             options: {}
         };
 
