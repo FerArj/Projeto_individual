@@ -94,11 +94,6 @@
 
 
     function obterDadosGrafico(idAquario) {
-        alterarTitulo(idAquario)
-
-        if (proximaAtualizacao != undefined) {
-            clearTimeout(proximaAtualizacao);
-        }
 
         fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
@@ -143,7 +138,7 @@
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.nome_doutor);
+            labels.push(registro.doutor);
             dados.datasets[0].data.push(registro.qtd);
         }
 
