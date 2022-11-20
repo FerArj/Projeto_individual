@@ -68,7 +68,7 @@ main .form a{
 main .form button {
     cursor: pointer;
     width: 50%;
-    margin-top: 20%;
+    margin-top: 5%;
     border: none;
     border-radius: 32px;
     background-color: #e55743;
@@ -99,4 +99,13 @@ section .circle{
     clip-path: circle(40% at right 80%);
     z-index: -1;
     background-image: url(../assets/img2/loginwpp.png);
+}
+
+
+.error {
+    border: red solid !important ;
+}
+
+.confirmar {
+    border: green solid !important;
 }
