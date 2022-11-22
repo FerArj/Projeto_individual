@@ -107,7 +107,7 @@
         // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
 
-        if (usuarioVar == "" || emailVar == "" || senhaVar == "" || fkVotoVar == "" || confirmacaoSenhaVar == "") {
+        if (usuarioVar == "" || emailVar == "" || senhaVar == "" || fkVotoVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Há campos em branco!";
 
@@ -170,20 +170,7 @@
 
                     /* Confirmar se a senha é igual nos dois campos*/
                     /*Veririfar se senha é igual com campo confirmar_senha*/
-                    if ((senhaVar == confirmacaoSenhaVar) && confirmacaoSenhaVar.length >= 8) {
-                        confirmar_senha_input.classList.remove("error")
-                        confirmar_senha_input.classList.add("confirmar")
-                        alerta_confirmar_senha.style.display = "flex"
-                        alerta_confirmar_senha.style.color = "green"
-                        alerta_confirmar_senha.innerHTML = "senha correta"
-                    } else {
-                        confirmar_senha_input.classList.add("error")
-                        confirmar_senha_input.classList.remove("confirmar")
-                        alerta_confirmar_senha.style.display = "flex"
-                        alerta_confirmar_senha.style.color = "red"
-                        alerta_confirmar_senha.innerHTML = "senha incorreta"
 
-                    }
                 } else {
                     senha_input.classList.remove("confirmar")
                     alerta_senha.innerHTML = "(pelo menos 8 caracteres)"
