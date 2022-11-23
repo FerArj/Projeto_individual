@@ -65,6 +65,57 @@ main .form a{
    /* text-decoration-line: line-through; */
 }
 
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    outline: 0;
+    border: 0!important;
+    background-color: #161923;
+    border: 1px solid #e55743;
+    box-shadow: none;
+    background-image: none;
+    font-size: 1em;
+    flex: 1;
+    padding: 0 .5em;
+    color: white;
+    cursor: pointer;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.select{
+    border: 1px solid #e55743;
+    margin-top: 15%;
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    overflow: hidden;
+    background-color: #161923;
+    border-radius: .25em;
+}
+
+
+.select::after{
+    content: '\25B2';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background-color: #e55743;
+    color: #161923;
+    pointer-events: none;
+    transition:.25 all ease;
+}
+
+.select:hover::after{
+    color: white;
+}
+
 main .form button {
     cursor: pointer;
     width: 50%;
@@ -76,8 +127,7 @@ main .form button {
 }
 
 main .form button:hover{
-    background-color: #b14334;
-}
+    background-color: #161923;}
 
 section.images{
     display: flex;
