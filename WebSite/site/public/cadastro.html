@@ -108,106 +108,114 @@
         var votoVar = 0;
         // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-
         if (usuarioVar == "" || emailVar == "" || senhaVar == "" || fkVotoVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Há campos em branco!";
 
+            var valida_vazio = 0
+        }
 
-            if (emailVar.indexOf(" ") > 0) {
-                email_input.classList.add("error")
-                email_input.remove("confirmar")
-                alerta_email.style.display = "flex"
-                alerta_email.style.color = "red"
-                alerta_email.innerHTML = "Email inválido, retire os espaços!"
+        if (emailVar.indexOf(" ") > 0) {
+            email_input.classList.add("error")
+            email_input.remove("confirmar")
+            alerta_email.style.display = "flex"
+            alerta_email.style.color = "red"
+            alerta_email.innerHTML = "Email inválido, retire os espaços!"
 
-            } else if ((emailVar.indexOf("@sptech.school") > 6 || emailVar.indexOf("@gmail.com") > 6) && emailVar.indexOf("@") > 6) {
-                alerta_email.style.color = "green"
-                alerta_email.innerHTML = "Email válido"
-                alerta_email.style.display = "flex"
-                email_input.classList.remove("error")
-                email_input.classList.add("confirmar")
+            var valida_email = 0
+        } else if ((emailVar.indexOf("@sptech.school") > 6 || emailVar.indexOf("@gmail.com") > 6) && emailVar.indexOf("@") > 6) {
+            alerta_email.style.color = "green"
+            alerta_email.innerHTML = "Email válido"
+            alerta_email.style.display = "flex"
+            email_input.classList.remove("error")
+            email_input.classList.add("confirmar")
 
+            valida_email = 1
+        } else {
+            email_input.classList.add("error")
+            email_input.classList.remove("confirmar")
+            alerta_email.style.display = "flex"
+            alerta_email.style.color = "red"
+            alerta_email.innerHTML = "Email inválido"
+
+            valida_email = 0
+        }
+
+        // VERIFICAR USUARIO
+
+        if (usuarioVar.length < 4) {
+            usuario_input.classList.add("error")
+            usuario_input.classList.remove("confirmar")
+            alerta_usuario.style.display = "flex"
+            alerta_usuario.style.color = "red"
+            alerta_usuario.innerHTML = "Usuario com poucos caracteres!"
+            ''
+            var valida_usuario = 0
+        } else {
+            alerta_usuario.style.color = "green"
+            alerta_usuario.innerHTML = "Usuario válido!"
+            alerta_usuario.style.display = "flex"
+            usuario_input.classList.remove("error")
+            usuario_input.classList.add("confirmar")
+
+            valida_usuario = 1
+        }
+
+        // VERIFICAR SENHA
+
+        /* validação da senha, se tem espaço no começo ou no fim */
+        if (senhaVar.startsWith(" ") || senhaVar.endsWith(" ")) {
+            alerta_senha.style.display = "flex"
+            alerta_senha.style.color = "Red"
+            alerta_senha.innerHTML = "A senha não pode começar nem terminar com um espaço"
+            senha_input.classList.add("error")
+
+            var valida_senha = 0
+        } else { /* validação da senha, se tem 8 letras ou mais */
+            if (senhaVar.length >= 8) {
+                senha_input.classList.remove("error")
+                senha_input.classList.add("confirmar")
+                alerta_senha.style.display = "flex"
+                alerta_senha.style.color = "Green"
+                alerta_senha.innerHTML = "(pelo menos 8 caracteres)"
+
+                /* Confirmar se a senha é igual nos dois campos*/
+                /*Veririfar se senha é igual com campo confirmar_senha*/
+                // if ((senhaVar == confirmacaoSenhaVar) && confirmacaoSenhaVar.length >= 8) {
+                //     confirmar_senha_input.classList.remove("error")
+                //     confirmar_senha_input.classList.add("confirmar")
+                //     alerta_confirmar_senha.style.display = "flex"
+                //     alerta_confirmar_senha.style.color = "green"
+                //     alerta_confirmar_senha.innerHTML = "senha correta"
+                // } else {
+                //     confirmar_senha_input.classList.add("error")
+                //     confirmar_senha_input.classList.remove("confirmar")
+                //     alerta_confirmar_senha.style.display = "flex"
+                //     alerta_confirmar_senha.style.color = "red"
+                //     alerta_confirmar_senha.innerHTML = "senha incorreta"
+
+                // }
+
+                valida_senha = 1
             } else {
-                email_input.classList.add("error")
-                email_input.classList.remove("confirmar")
-                alerta_email.style.display = "flex"
-                alerta_email.style.color = "red"
-                alerta_email.innerHTML = "Email inválido"
-            }
-
-            // VERIFICAR USUARIO
-
-            if (usuarioVar.length < 4) {
-                usuario_input.classList.add("error")
-                usuario_input.classList.remove("confirmar")
-                alerta_usuario.style.display = "flex"
-                alerta_usuario.style.color = "red"
-                alerta_usuario.innerHTML = "Usuario com poucos caracteres!"
-
-            } else {
-                alerta_usuario.style.color = "green"
-                alerta_usuario.innerHTML = "Usuario válido!"
-                alerta_usuario.style.display = "flex"
-                usuario_input.classList.remove("error")
-                usuario_input.classList.add("confirmar")
-            }
-
-            // VERIFICAR SENHA
-
-            /* validação da senha, se tem espaço no começo ou no fim */
-            if (senhaVar.startsWith(" ") || senhaVar.endsWith(" ")) {
+                senha_input.classList.remove("confirmar")
+                alerta_senha.innerHTML = "(pelo menos 8 caracteres)"
                 alerta_senha.style.display = "flex"
                 alerta_senha.style.color = "Red"
-                alerta_senha.innerHTML = "A senha não pode começar nem terminar com um espaço"
                 senha_input.classList.add("error")
 
-            } else { /* validação da senha, se tem 8 letras ou mais */
-                if (senhaVar.length >= 8) {
-                    senha_input.classList.remove("error")
-                    senha_input.classList.add("confirmar")
-                    alerta_senha.style.display = "flex"
-                    alerta_senha.style.color = "Green"
-                    alerta_senha.innerHTML = "(pelo menos 8 caracteres)"
-
-                    /* Confirmar se a senha é igual nos dois campos*/
-                    /*Veririfar se senha é igual com campo confirmar_senha*/
-                    // if ((senhaVar == confirmacaoSenhaVar) && confirmacaoSenhaVar.length >= 8) {
-                    //     confirmar_senha_input.classList.remove("error")
-                    //     confirmar_senha_input.classList.add("confirmar")
-                    //     alerta_confirmar_senha.style.display = "flex"
-                    //     alerta_confirmar_senha.style.color = "green"
-                    //     alerta_confirmar_senha.innerHTML = "senha correta"
-                    // } else {
-                    //     confirmar_senha_input.classList.add("error")
-                    //     confirmar_senha_input.classList.remove("confirmar")
-                    //     alerta_confirmar_senha.style.display = "flex"
-                    //     alerta_confirmar_senha.style.color = "red"
-                    //     alerta_confirmar_senha.innerHTML = "senha incorreta"
-
-                    // }
-                } else {
-                    senha_input.classList.remove("confirmar")
-                    alerta_senha.innerHTML = "(pelo menos 8 caracteres)"
-                    alerta_senha.style.display = "flex"
-                    alerta_senha.style.color = "Red"
-                    senha_input.classList.add("error")
-
-                }
-
-
-                return false;
-                finalizarAguardar();
+                valida_senha = 0
             }
-
+        }
+        if (valida_vazio == 0 && valida_email == 0 && valida_senha == 0 && valida_usuario == 0) {
             return false;
             finalizarAguardar();
         } else {
             setInterval(sumirMensagem, 5000)
         }
 
-
         // Enviando o valor da nova input
+        if (valida_vazio != 0 && valida_email != 0 && valida_senha != 0 && valida_usuario != 0) {
         fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
@@ -247,6 +255,7 @@
 
         return false;
     }
+}
 
     function sumirMensagem() {
         cardErro.style.display = "none"
