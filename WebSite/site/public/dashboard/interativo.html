@@ -35,8 +35,8 @@
         <div class="banner">
             <div class="container-interativo">
                 <img class="back-video" src="../assets/img2/banner1.png" alt="">
-                <h1 class="int-titulo">Bem vindo, <h1 id="h1_usuario" style="color: #598ff5;">
-                        <h1 style="color: #598ff5;">.</h1>
+                <h1 class="int-titulo">Bem vindo, <h1 id="h1_usuario">
+                        <h1>.</h1>
                     </h1>
                 </h1>
             </div>
@@ -56,21 +56,21 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="conteudo2" class="conteudo2">
+        <div id="conteudo2" class="conteudo2">
             <div class="container">
                 <div class="caixas">
                     <div class="caixa">
-                        <h3>TARDIS</h3>
-                        <p>Para quem olha de fora, é apenas uma caixa azul...</p>
+                        <h3>JOGO DA FORCA</h3>
+                        <p>Teste seu conhecimento nesse incrivel jogo da forca temático da série!</p>
                         <img src="../assets/img/THE-GHOST-MONUMENT.png" alt="">
 
-                        <a href="#descricao2">
-                            <div onclick="ler_mais_conteudo2()" class="button">VOLTAR</div>
+                        <a href="forca.html">
+                            <div class="button">JOGAR</div>
                         </a>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </main>
     <footer>
         <div class="container">
@@ -81,10 +81,6 @@
 
 </html>
 <script src="../js/funcoes.js"></script>
-</body>
-
-</html>
-
 <script>
 
     h1_usuario.innerHTML = sessionStorage.NOME_USUARIO;
@@ -122,9 +118,9 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'VOTAÇÕES DE USUÁRIOS',
-                backgroundColor: '#598ff5',
-                borderColor: '#598ff5',
+                label: 'VOTAÇÕES DE OUTROS USUÁRIOS',
+                backgroundColor: '#e55743',
+                borderColor: '#e55743',
                 data: [],
             }]
         };

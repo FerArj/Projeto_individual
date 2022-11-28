@@ -42,6 +42,12 @@ function nextImage(){
     document.getElementById("radio"+n).checked = true;
 }
 
+
+
+
+
+
+
 // FUNÇÕES DO FORMULARIO
 
 // sessão

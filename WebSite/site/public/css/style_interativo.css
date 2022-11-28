@@ -114,14 +114,14 @@ header {
      /* color: white; */
      font-size: 40px;
      text-transform: uppercase;
-     /* background-image: linear-gradient(-225deg, #ffc107 0%, #ff5722 29%, #ff1361 67%, #fff800 100%); */
+     background-image: linear-gradient(-225deg, #ffc107 0%, #ff5722 29%, #ff1361 67%, #fff800 100%);
      background-size: auto auto;
      background-clip: border-box;
      background-size: 200% auto;
      color: #fff;
      background-clip: text;
      -webkit-background-clip: text;
-     /* -webkit-text-fill-color: transparent; */
+     -webkit-text-fill-color: transparent;
      animation: textclip 2s linear infinite;
      display: inline-block;
      font-size: 700%;
@@ -139,7 +139,7 @@ header {
     bottom: 0;
     z-index: -1;
     width: 100%;
-        filter: brightness(0.6);
+        filter: brightness(0.2);
 }
 
 /* CONTEUDO PRINCIPAL */
@@ -147,7 +147,7 @@ header {
 /* CONTEÚDO1 */
 
 .conteudo1 {
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     width: 100%;
     display: flex;
     margin-top: -4%;
@@ -190,8 +190,8 @@ header {
     margin-left: 100%;
     margin-top: -30%;
     border-radius: 50%;
-    border: 3px solid #598ff5;
-    background-color: #598ff5;
+    border: 3px solid #ff1361;
+    background-color: #e55743;
 }
 
 .button {
