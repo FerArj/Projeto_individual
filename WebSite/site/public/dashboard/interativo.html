@@ -133,16 +133,11 @@
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
 
-        maior = 0;
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            maior = resposta[i]
             labels.push(registro.doutor);
             dados.datasets[0].data.push(registro.qtd);
-        }
-
-        alert(dados.datasets[0].data[maior])
-        
+        }     
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
