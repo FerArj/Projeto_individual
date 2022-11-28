@@ -62,7 +62,7 @@
                     <div class="caixa">
                         <h3>JOGO DA FORCA</h3>
                         <p>Teste seu conhecimento nesse incrivel jogo da forca temático da série!</p>
-                        <img src="../assets/img/THE-GHOST-MONUMENT.png" alt="">
+                        <img src="../assets/img2/cyberman.png" alt="">
 
                         <a href="forca.html">
                             <div class="button">JOGAR</div>
@@ -132,11 +132,17 @@
         console.log(resposta)
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
+
+        maior = 0;
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
+            maior = resposta[i]
             labels.push(registro.doutor);
             dados.datasets[0].data.push(registro.qtd);
         }
+
+        alert(dados.datasets[0].data[maior])
+        
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
