@@ -141,7 +141,7 @@ section img{
 
 section .circle{
     position: absolute;
-    height: 100%;
+    height: 120%;
     width: 100%;
     background: linear-gradient(45deg,#e55743, #b14334);
     top: 0;
@@ -151,6 +151,14 @@ section .circle{
     /* background-image: url(../assets/img2/loginwpp.png); */
 }
 
+.radio{
+    display: flex;
+    align-items: center;
+}
+
+.radio p {
+    padding: 5px;
+}
 
 .error {
     border: red solid !important ;

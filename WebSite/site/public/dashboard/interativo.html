@@ -50,7 +50,7 @@
                             <div class="chart-container" style="position: relative; height:40vh; width:40vw">
                                 <canvas id="myChart"></canvas>
                             </div>
-                            <!-- <img id="doctors" src="../assets/doctors/2th_doctor.png" alt=""> -->
+                            <img id="doctors">
                         </div>
                     </div>
                 </div>
@@ -71,21 +71,21 @@
                 </div>
             </div>
         </div>
-        <div id="conteudo2" class="conteudo2">
+    <div id="conteudo2" class="conteudo2">
             <div class="container">
                 <div class="caixas">
                     <div class="caixa">
-                        <h3>COMPARTILHE</h3>
-                        <p>Veja teorias e opiniões de outros usuários!</p>
+                        <h3>CRIE SUA RAÇA</h3>
+                        <p>Crie sua propria raça alienigena!</p>
                         <img src="../assets/img2/jodie.png" alt="">
 
                         <a href="chat.html">
-                            <div class="button">CONFERIR</div>
+                            <div class="button">CRIAR</div>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </main>
     <footer>
         <div class="container">
@@ -148,11 +148,70 @@
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
 
+        maior = 0
+        nome = 'samuel'
+
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
+            
+            if(maior < registro.qtd){
+                maior = registro.qtd
+                nome = registro.doutor
+            }
+
             labels.push(registro.doutor);
             dados.datasets[0].data.push(registro.qtd);
         }     
+
+        // alert(nome + maior)
+        
+        var img = document.getElementById("doctors")
+
+        if(nome == "1th Doctor"){
+            img.src = "/assets/doctors/1th_doctor.png"
+
+        }else if(nome == "2th Doctor"){
+            img.src = "/assets/doctors/2th_doctor.png"
+
+        }else if(nome == "3th Doctor"){
+            img.src = "/assets/doctors/3th_doctor.png"
+            
+        }else if(nome == "4th Doctor"){
+            img.src = "/assets/doctors/4th_doctor.png"
+            
+        }else if(nome == "5th Doctor"){
+            img.src = "/assets/doctors/5th_doctor.png"
+            
+        }else if(nome == "6th Doctor"){
+            img.src = "/assets/doctors/6th_doctor.png"
+            
+        }else if(nome == "7th Doctor"){
+            img.src = "/assets/doctors/7th_doctor.png"
+            
+        }else if(nome == "8th Doctor"){
+            img.src = "/assets/doctors/8th_doctor.png"
+            
+        }else if(nome == "War Doctor"){
+            img.src = "/assets/doctors/war_doctor.png"
+            
+        }else if(nome == "9th Doctor"){
+            img.src = "/assets/doctors/9th_doctor.png"
+            
+        }else if(nome == "10th Doctor"){
+            img.src = "/assets/doctors/10th_doctor.png"
+            
+        }else if(nome == "11th Doctor"){
+            img.src = "/assets/doctors/11th_doctor.png"
+            
+        }else if(nome == "12th Doctor"){
+            img.src = "/assets/doctors/12th_doctor.png"
+            
+        }else if(nome == "13th Doctor"){
+            img.src = "/assets/doctors/13th_doctor.png"
+            
+        }else if(nome == "14th Doctor"){
+            img.src = "/assets/doctors/14th_doctor.png"
+        };
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
