@@ -16,6 +16,14 @@ create table usuario (
     foreign key (fkVotacao) references votacao (idVotacao)
 );
 
+create table aviso (
+	idAviso int primary key auto_increment,
+    titulo varchar (100),
+	descricao varchar (150),
+    fk_usuario int,
+    foreign key (fk_usuario) references usuario (idUsuario)
+);
+
 insert into votacao values
 	(null, '1th Doctor'),
 	(null, '2th Doctor'),
@@ -56,12 +64,21 @@ select * from votacao;
     
 select * from usuario join votacao on fkVotacao = idVotacao;
 
+ SELECT a.idAviso AS idAviso,
+            a.titulo,
+            a.descricao,
+            a.fk_usuario,
+            u.idUsuario AS idUsuario,
+            u.nome_usuario,
+            u.email,
+            u.senha
+        FROM aviso a
+            INNER JOIN usuario u
+                ON a.fk_usuario = u.idUsuario;
 
 /*update votacao set qtd_votos = 1 where idVotacao = 1;*/
 
 SELECT COUNT(nome_doutor) FROM votacao join usuario on fkVotacao = idVotacao WHERE idVotacao = 2;
-
-select votacao.nome_doutor as doutor, count(usuario.fkVotacao) as qtd from usuario as u join votacao as v on v.idVotacao = u.fkVotacao group by u.fkVotacao;
 
 select v.nome_doutor as doutor, count(u.fkVotacao) as qtd from usuario as u join votacao as v on v.idVotacao = u.fkVotacao group by u.fkVotacao;
 
