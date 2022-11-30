@@ -27,7 +27,7 @@ function pesquisarDescricao(texto) {
             a.titulo,
             a.descricao,
             a.fk_usuario,
-            u.idAviso AS idUsuario,
+            u.idUsuario AS idUsuario,
             u.nome_usuario,
             u.email,
             u.senha

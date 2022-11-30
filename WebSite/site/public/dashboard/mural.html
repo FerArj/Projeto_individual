@@ -50,7 +50,7 @@
                             <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
                         </label>
                         <br>
-                        <button>Criar</button>
+                        <button id="btnCriar">Criar</button>
                     </form>
                 </div>
                 <h1>Rede de Personagens</h1>
@@ -154,6 +154,9 @@
 
                     var feed = document.getElementById("feed_container");
                     feed.innerHTML = "";
+
+                    var idUsuario = sessionStorage.ID_USUARIO
+
                     for (let i = 0; i < resposta.length; i++) {
                         var publicacao = resposta[i];
 
@@ -167,6 +170,9 @@
                         var btnEditar = document.createElement("button");
                         var btnDeletar = document.createElement("button");
 
+                        if(idUsuario == publicacao.idUsuario) {
+                            btnCriar.style.display = "none";
+                        }
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
                         spanTitulo.innerHTML = "Personagem: <b>" + publicacao.titulo + "</b>";
