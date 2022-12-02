@@ -19,7 +19,7 @@ create table usuario (
 create table aviso (
 	idAviso int primary key auto_increment,
     titulo varchar (100),
-	descricao varchar (150),
+	descricao varchar (255),
     fk_usuario int,
     foreign key (fk_usuario) references usuario (idUsuario)
 );
@@ -42,21 +42,17 @@ insert into votacao values
 	(null, '14th Doctor');
 
 insert into usuario values
-	(null, 'whovian3@gmail.com', 'whovian3', '123', 2),
-    (null, 'whovian4@gmail.com', 'whovian4', '123', 2),
-    (null, 'whovian5@gmail.com', 'whovian5', '123', 2),
-    (null, 'whovian6@gmail.com', 'whovian6', '123', 5),
-    (null, 'whovian7@gmail.com', 'whovian7', '123', 6),
-    (null, 'whovian8@gmail.com', 'whovian8', '123', 6),
-    (null, 'whovian9@gmail.com', 'whovian9', '123', 7),
-    (null, 'whovian10@gmail.com', 'whovian10', '123', 3),
-    (null, 'whovian11@gmail.com', 'whovian11', '123', 5),
-    (null, 'whovian12@gmail.com', 'whovian12', '123', 9),
-    (null, 'whovian13@gmail.com', 'whovian13', '123', 7),
-    (null, 'whovian14@gmail.com', 'whovian14', '123', 1),
-    (null, 'whovian15@gmail.com', 'whovian15', '123', 1);
+    (null, 'enzo@gmail.com', 'Enzo', '12345678', 1),
+    (null, 'vitor@gmail.com', 'Vitor', '12345678', 2),
+    (null, 'joao@gmail.com', 'João', '12345678', 3),
+    (null, 'maria@gmail.com', 'Marie', '12345678', 4),
+    (null, 'joaquim@gmail.com', 'Joaquim', '12345678', 5),
+    (null, 'lukas@gmail.com', 'Lukas', '12345678', 6),
+    (null, 'nome1@gmail.com', 'nome1', '12345678', 7),
+    (null, 'nome2@gmail.com', 'nome2', '12345678', 8),
+    (null, 'nome3@gmail.com', 'nome3', '12345678', 9),
+    (null, 'nome4@gmail.com', 'nome4', '12345678', 10);
     
-
 select * from usuario;
 select * from votacao;
     
@@ -87,3 +83,14 @@ select v.nome_doutor as doutor, count(u.fkVotacao) as qtd
                             from usuario as u join votacao as v 
                             on v.idVotacao = u.fkVotacao 
                                 group by u.fkVotacao order by count(u.fkVotacao) desc;
+                                
+                                
+	-- DESCRICAO SAMUEL - 12TH DOCTOR
+-- Meu personagem tem como alter-ego um cientista louco, possuindo características egocêntricas, anormais. Uma forte característica do personagem é sua teimosia, o impedindo de diferenciar certas situações, assim, confundindo todos ao seu redor que passam a considerá-lo estranho, ou até mesmo insensível, pela sua falta de distinção.
+-- pronto
+-- dei ctrl c e ctrl v man
+-- confia
+
+	-- DESCRICAO DIGO - 13TH DOCTOR
+    
+    -- Dexter é um doutor fechado, sua aparência física o torna um pouco sombrio, seu temperamento frio, calmo e calculista o deixa as pessoas assustadas, mas isso tudo aconteceu após ele fazer uma grande descoberta e guardar esse segredo consigo. No entanto, ele é um doutor muito sábio e ágil em seus serviços

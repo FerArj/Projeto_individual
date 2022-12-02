@@ -50,30 +50,30 @@
                 <div class="select">
                     <select id="voto_input" name="voto">
                         <option selected disabled>Doutor favorito</option>
-                        <option value="1">1th Doctor</option>
-                        <option value="2">2th Doctor</option>
-                        <option value="3">3th Doctor</option>
-                        <option value="4">4th Doctor</option>
-                        <option value="5">5th Doctor</option>
-                        <option value="6">6th Doctor</option>
-                        <option value="7">7th Doctor</option>
-                        <option value="8">8th Doctor</option>
-                        <option value="9">War Doctor</option>
-                        <option value="10">9th Doctor</option>
-                        <option value="11">10th Doctor</option>
-                        <option value="12">11th Doctor</option>
-                        <option value="13">12th Doctor</option>
-                        <option value="14">13th Doctor</option>
-                        <option value="15">14th Doctor</option>
+                        <option value="1">1th Doctor (William Hartnell)</option>
+                        <option value="2">2th Doctor (Patrick Troughton)</option>
+                        <option value="3">3th Doctor (Jon Pertwee)</option>
+                        <option value="4">4th Doctor (Tom Baker)</option>
+                        <option value="5">5th Doctor (Peter Davison)</option>
+                        <option value="6">6th Doctor (Colin Baker)</option>
+                        <option value="7">7th Doctor (Sylvester McCoy)</option>
+                        <option value="8">8th Doctor (Paul McGann)</option>
+                        <option value="9">War Doctor (John Hurt)</option>
+                        <option value="10">9th Doctor (Christopher Eccleston)</option>
+                        <option value="11">10th Doctor (David Tennant)</option>
+                        <option value="12">11th Doctor (Matt Smith)</option>
+                        <option value="13">12th Doctor (Peter Capaldi)</option>
+                        <option value="14">13th Doctor (Jodie Whittaker )</option>
+                        <!-- <option value="15">14th Doctor (William Hartnell)</option> -->
                     </select>
                 </div>
 
             </label>
 
-            <div class="radio">
-                <input style="width: 13px;" type="radio" class="radio-check" id="concorda_input">
-                <p>você concorda com os termos de uso?</p>
-            </div>
+            <!-- <div class="radio"> -->
+                <!-- <input style="width: 13px;" type="radio" class="radio-check" id="concorda_input"> -->
+                <!-- <p>você concorda com os termos de uso?</p> -->
+            <!-- </div> -->
 
 
             <p>Já tem uma conta? <a href="login.html">Acesse aqui.</a></p>
@@ -130,7 +130,7 @@
             alerta_email.innerHTML = "Email inválido, retire os espaços!"
 
             var valida_email = 0
-        } else if ((emailVar.indexOf("@sptech.school") > 6 || emailVar.indexOf("@gmail.com") > 6) && emailVar.indexOf("@") > 6) {
+        } else if ((emailVar.indexOf("@sptech.school") > 2 || emailVar.indexOf("@gmail.com") > 2) && emailVar.indexOf("@") > 2) {
             alerta_email.style.color = "green"
             alerta_email.innerHTML = "Email válido"
             alerta_email.style.display = "flex"
